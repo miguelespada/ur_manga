@@ -1,0 +1,5 @@
+[01m[K/home/miguel/ws_moveit/src/moveit_tutorials/doc/pr2_tutorials/kinematics/src/kinematic_model_tutorial.cpp:45:51:[m[K [01;31m[Kfatal error: [m[Kmoveit/planning_interface/move_group.h: No such file or directory
+compilation terminated.
+make[2]: *** [doc/pr2_tutorials/kinematics/CMakeFiles/kinematic_model_tutorial.dir/src/kinematic_model_tutorial.cpp.o] Error 1
+make[1]: *** [doc/pr2_tutorials/kinematics/CMakeFiles/kinematic_model_tutorial.dir/all] Error 2
+make: *** [all] Error 2

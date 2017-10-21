@@ -1,0 +1,1 @@
+/home/miguel/ws_moveit/devel/.private/pr2_msgs/share/pr2_msgs/cmake/pr2_msgsConfig-version.cmake

@@ -1,0 +1,8 @@
+[01m[K/home/miguel/ws_moveit/src/moveit_tutorials/doc/pr2_tutorials/planning/src/move_group_interface_tutorial.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/miguel/ws_moveit/src/moveit_tutorials/doc/pr2_tutorials/planning/src/move_group_interface_tutorial.cpp:245:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kstart_pose[m[K’ was not declared in this scope
+   start_pose.orientation.x = -0.361264641953;
+[01;32m[K   ^[m[K
+make[2]: *** [doc/pr2_tutorials/planning/CMakeFiles/move_group_interface_tutorial.dir/src/move_group_interface_tutorial.cpp.o] Error 1
+make[1]: *** [doc/pr2_tutorials/planning/CMakeFiles/move_group_interface_tutorial.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [all] Error 2

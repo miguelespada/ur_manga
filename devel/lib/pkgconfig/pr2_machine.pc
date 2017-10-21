@@ -1,0 +1,1 @@
+/home/miguel/ws_moveit/devel/.private/pr2_machine/lib/pkgconfig/pr2_machine.pc

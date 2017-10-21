@@ -1,0 +1,10 @@
+[01m[K/home/miguel/ws_moveit/src/moveit_tutorials/doc/pr2_tutorials/planning/src/move_group_interface_tutorial.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/miguel/ws_moveit/src/moveit_tutorials/doc/pr2_tutorials/planning/src/move_group_interface_tutorial.cpp:165:21:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kgeometry_msgs::Pose box_pose[m[K’
+ geometry_msgs::Pose box_pose;
+[01;32m[K                     ^[m[K
+[01m[K/home/miguel/ws_moveit/src/moveit_tutorials/doc/pr2_tutorials/planning/src/move_group_interface_tutorial.cpp:148:21:[m[K [01;36m[Knote: [m[K‘[01m[Kgeometry_msgs::Pose box_pose[m[K’ previously declared here
+ geometry_msgs::Pose box_pose;
+[01;32m[K                     ^[m[K
+make[2]: *** [doc/pr2_tutorials/planning/CMakeFiles/move_group_interface_tutorial.dir/src/move_group_interface_tutorial.cpp.o] Error 1
+make[1]: *** [doc/pr2_tutorials/planning/CMakeFiles/move_group_interface_tutorial.dir/all] Error 2
+make: *** [all] Error 2

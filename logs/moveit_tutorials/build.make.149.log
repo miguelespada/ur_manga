@@ -1,0 +1,23 @@
+[35m[1mScanning dependencies of target move_group_interface_tutorial[0m
+[  6%] Built target kinematic_model_tutorial
+[ 12%] Built target ros_api_tutorial
+[ 18%] Built target motion_planning_api_tutorial
+[ 30%] Built target planning_scene_tutorial
+[ 30%] Built target planning_scene_ros_api_tutorial
+[ 36%] Built target planning_pipeline_tutorial
+[ 39%] [32mBuilding CXX object doc/pr2_tutorials/planning/CMakeFiles/move_group_interface_tutorial.dir/src/move_group_interface_tutorial.cpp.o[0m
+[ 45%] Built target state_display_tutorial
+[ 66%] Built target pick_place_tutorial
+[ 66%] Built target interactivity_tutorial
+[ 81%] Built target attached_body_tutorial
+[ 96%] Built target collision_contact_tutorial
+[01m[K/home/miguel/ws_moveit/src/moveit_tutorials/doc/pr2_tutorials/planning/src/move_group_interface_tutorial.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/miguel/ws_moveit/src/moveit_tutorials/doc/pr2_tutorials/planning/src/move_group_interface_tutorial.cpp:200:35:[m[K [01;31m[Kerror: [m[K‘[01m[Ktarget_pose1[m[K’ was not declared in this scope
+   visual_tools.publishAxisLabeled(target_pose1, "pose1");
+[01;32m[K                                   ^[m[K
+doc/pr2_tutorials/planning/CMakeFiles/move_group_interface_tutorial.dir/build.make:62: recipe for target 'doc/pr2_tutorials/planning/CMakeFiles/move_group_interface_tutorial.dir/src/move_group_interface_tutorial.cpp.o' failed
+make[2]: *** [doc/pr2_tutorials/planning/CMakeFiles/move_group_interface_tutorial.dir/src/move_group_interface_tutorial.cpp.o] Error 1
+CMakeFiles/Makefile2:3197: recipe for target 'doc/pr2_tutorials/planning/CMakeFiles/move_group_interface_tutorial.dir/all' failed
+make[1]: *** [doc/pr2_tutorials/planning/CMakeFiles/move_group_interface_tutorial.dir/all] Error 2
+Makefile:138: recipe for target 'all' failed
+make: *** [all] Error 2

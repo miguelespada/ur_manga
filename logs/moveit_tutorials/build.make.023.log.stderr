@@ -1,0 +1,16 @@
+[01m[K/home/miguel/ws_moveit/src/moveit_tutorials/doc/pr2_tutorials/kinematics/src/kinematic_model_tutorial.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/miguel/ws_moveit/src/moveit_tutorials/doc/pr2_tutorials/kinematics/src/kinematic_model_tutorial.cpp:121:59:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst Affine3d {aka const Eigen::Transform<double, 3, 2>}[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [-fpermissive]
+   end_effector_state.translate(Eigen::Vector3d(0,0.0,0.03));
+[01;32m[K                                                           ^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Geometry:44:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/moveit/robot_model/joint_model.h:47[m[K,
+                 from [01m[K/opt/ros/kinetic/include/moveit/robot_model/joint_model_group.h:41[m[K,
+                 from [01m[K/opt/ros/kinetic/include/moveit/robot_model/robot_model.h:48[m[K,
+                 from [01m[K/opt/ros/kinetic/include/moveit/robot_model_loader/robot_model_loader.h:41[m[K,
+                 from [01m[K/home/miguel/ws_moveit/src/moveit_tutorials/doc/pr2_tutorials/kinematics/src/kinematic_model_tutorial.cpp:40[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Geometry/Transform.h:878:1:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[KEigen::Transform<Scalar, Dim, Mode, Options>& Eigen::Transform<Scalar, Dim, Mode, _Options>::translate(const Eigen::MatrixBase<OtherDerived>&) [with OtherDerived = Eigen::Matrix<double, 3, 1>; _Scalar = double; int _Dim = 3; int _Mode = 2; int _Options = 0][m[K’
+ Transform<Scalar,Dim,Mode,Options>::translate(const MatrixBase<OtherDerived> &other)
+[01;32m[K ^[m[K
+make[2]: *** [doc/pr2_tutorials/kinematics/CMakeFiles/kinematic_model_tutorial.dir/src/kinematic_model_tutorial.cpp.o] Error 1
+make[1]: *** [doc/pr2_tutorials/kinematics/CMakeFiles/kinematic_model_tutorial.dir/all] Error 2
+make: *** [all] Error 2

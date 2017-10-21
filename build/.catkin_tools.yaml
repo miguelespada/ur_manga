@@ -1,0 +1,6 @@
+devel_space: /home/miguel/ws_moveit/devel
+install: false
+install_space: /home/miguel/ws_moveit/install
+profile: default
+source_space: /home/miguel/ws_moveit/src
+workspace: /home/miguel/ws_moveit

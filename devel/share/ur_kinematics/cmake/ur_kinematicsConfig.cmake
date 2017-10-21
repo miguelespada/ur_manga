@@ -1,0 +1,1 @@
+/home/miguel/ws_moveit/devel/.private/ur_kinematics/share/ur_kinematics/cmake/ur_kinematicsConfig.cmake

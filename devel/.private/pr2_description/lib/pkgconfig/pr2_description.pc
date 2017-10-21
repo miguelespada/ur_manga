@@ -1,0 +1,8 @@
+prefix=/home/miguel/ws_moveit/devel/.private/pr2_description
+
+Name: pr2_description
+Description: Description of pr2_description
+Version: 1.12.0
+Cflags: 
+Libs: -L/home/miguel/ws_moveit/devel/.private/pr2_description/lib 
+Requires: xacro

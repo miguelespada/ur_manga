@@ -1,0 +1,4 @@
+In file included from [01m[K/home/miguel/ws_moveit/src/moveit_tutorials/doc/pr2_tutorials/kinematics/src/kinematic_model_tutorial.cpp:45:0[m[K:
+[01m[K/opt/ros/kinetic/include/moveit/move_group_interface/move_group.h:43:2:[m[K [01;35m[Kwarning: [m[K#warning "This header is deprecated and will go away in ROS lunar." "Please use moveit/move_group_interface/move_group_interface.h" "and the class MoveGroupInterface instead of MoveGroup" [-Wcpp]
+ #warning "This header is deprecated and will go away in ROS lunar."\
+[01;32m[K  ^[m[K

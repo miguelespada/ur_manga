@@ -1,0 +1,1 @@
+/home/miguel/ws_moveit/devel/.private/pr2_msgs/share/roseus/ros/pr2_msgs/msg/BatteryState2.l

@@ -1,0 +1,73 @@
+[01m[K/home/miguel/ws_moveit/src/moveit_tutorials/doc/pr2_tutorials/kinematics/src/kinematic_model_tutorial.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/miguel/ws_moveit/src/moveit_tutorials/doc/pr2_tutorials/kinematics/src/kinematic_model_tutorial.cpp:120:36:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[KEigen::Transform<double, 3, 2>::ConstTranslationPart {aka const Eigen::Block<const Eigen::Matrix<double, 4, 4>, 3, 1, true>}[m[K’ and ‘[01m[KEigen::Vector3d {aka Eigen::Matrix<double, 3, 1>}[m[K’)
+   end_effector_state.translation() = Eigen::Vector3d(0.7,0.4,1.1);
+[01;32m[K                                    ^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:354:0[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Geometry:11[m[K,
+                 from [01m[K/opt/ros/kinetic/include/moveit/robot_model/joint_model.h:47[m[K,
+                 from [01m[K/opt/ros/kinetic/include/moveit/robot_model/joint_model_group.h:41[m[K,
+                 from [01m[K/opt/ros/kinetic/include/moveit/robot_model/robot_model.h:48[m[K,
+                 from [01m[K/opt/ros/kinetic/include/moveit/robot_model_loader/robot_model_loader.h:41[m[K,
+                 from [01m[K/home/miguel/ws_moveit/src/moveit_tutorials/doc/pr2_tutorials/kinematics/src/kinematic_model_tutorial.cpp:40[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Assign.h:64:30:[m[K [01;36m[Knote: [m[Kcandidate: Derived& Eigen::MatrixBase<Derived>::operator=(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = Eigen::Matrix<double, 3, 1>; Derived = Eigen::Block<const Eigen::Matrix<double, 4, 4>, 3, 1, true>] <near match>
+ EIGEN_STRONG_INLINE Derived& MatrixBase<Derived>::operator=(const DenseBase<OtherDerived>& other)
+[01;32m[K                              ^[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Assign.h:64:30:[m[K [01;36m[Knote: [m[K  passing ‘[01m[KEigen::Transform<double, 3, 2>::ConstTranslationPart* {aka const Eigen::Block<const Eigen::Matrix<double, 4, 4>, 3, 1, true>*}[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers
+[01m[K/usr/include/eigen3/Eigen/src/Core/Assign.h:73:30:[m[K [01;36m[Knote: [m[Kcandidate: Derived& Eigen::MatrixBase<Derived>::operator=(const Eigen::EigenBase<OtherDerived>&) [with OtherDerived = Eigen::Matrix<double, 3, 1>; Derived = Eigen::Block<const Eigen::Matrix<double, 4, 4>, 3, 1, true>] <near match>
+ EIGEN_STRONG_INLINE Derived& MatrixBase<Derived>::operator=(const EigenBase<OtherDerived>& other)
+[01;32m[K                              ^[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Assign.h:73:30:[m[K [01;36m[Knote: [m[K  passing ‘[01m[KEigen::Transform<double, 3, 2>::ConstTranslationPart* {aka const Eigen::Block<const Eigen::Matrix<double, 4, 4>, 3, 1, true>*}[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:62:0[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Geometry:11[m[K,
+                 from [01m[K/opt/ros/kinetic/include/moveit/robot_model/joint_model.h:47[m[K,
+                 from [01m[K/opt/ros/kinetic/include/moveit/robot_model/joint_model_group.h:41[m[K,
+                 from [01m[K/opt/ros/kinetic/include/moveit/robot_model/robot_model.h:48[m[K,
+                 from [01m[K/opt/ros/kinetic/include/moveit/robot_model_loader/robot_model_loader.h:41[m[K,
+                 from [01m[K/home/miguel/ws_moveit/src/moveit_tutorials/doc/pr2_tutorials/kinematics/src/kinematic_model_tutorial.cpp:40[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Block.h:112:5:[m[K [01;36m[Knote: [m[Kcandidate: Eigen::Block<XprType, BlockRows, BlockCols, InnerPanel>& Eigen::Block<XprType, BlockRows, BlockCols, InnerPanel>::operator=(const Eigen::Block<XprType, BlockRows, BlockCols, InnerPanel>&) [with XprType = const Eigen::Matrix<double, 4, 4>; int BlockRows = 3; int BlockCols = 1; bool InnerPanel = true]
+     EIGEN_INHERIT_ASSIGNMENT_OPERATORS(Block)
+[01;32m[K     ^[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Block.h:112:5:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KEigen::Vector3d {aka Eigen::Matrix<double, 3, 1>}[m[K’ to ‘[01m[Kconst Eigen::Block<const Eigen::Matrix<double, 4, 4>, 3, 1, true>&[m[K’
+[01m[K/usr/include/eigen3/Eigen/src/Core/Block.h:344:5:[m[K [01;36m[Knote: [m[Kcandidate: Eigen::internal::BlockImpl_dense<XprType, BlockRows, BlockCols, InnerPanel, true>& Eigen::internal::BlockImpl_dense<XprType, BlockRows, BlockCols, InnerPanel, true>::operator=(const Eigen::internal::BlockImpl_dense<XprType, BlockRows, BlockCols, InnerPanel, true>&) [with XprType = const Eigen::Matrix<double, 4, 4>; int BlockRows = 3; int BlockCols = 1; bool InnerPanel = true]
+     EIGEN_INHERIT_ASSIGNMENT_OPERATORS(BlockImpl_dense)
+[01;32m[K     ^[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Block.h:344:5:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KEigen::Vector3d {aka Eigen::Matrix<double, 3, 1>}[m[K’ to ‘[01m[Kconst Eigen::internal::BlockImpl_dense<const Eigen::Matrix<double, 4, 4>, 3, 1, true, true>&[m[K’
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:354:0[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Geometry:11[m[K,
+                 from [01m[K/opt/ros/kinetic/include/moveit/robot_model/joint_model.h:47[m[K,
+                 from [01m[K/opt/ros/kinetic/include/moveit/robot_model/joint_model_group.h:41[m[K,
+                 from [01m[K/opt/ros/kinetic/include/moveit/robot_model/robot_model.h:48[m[K,
+                 from [01m[K/opt/ros/kinetic/include/moveit/robot_model_loader/robot_model_loader.h:41[m[K,
+                 from [01m[K/home/miguel/ws_moveit/src/moveit_tutorials/doc/pr2_tutorials/kinematics/src/kinematic_model_tutorial.cpp:40[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Assign.h:55:30:[m[K [01;36m[Knote: [m[Kcandidate: Derived& Eigen::MatrixBase<Derived>::operator=(const Eigen::MatrixBase<Derived>&) [with Derived = Eigen::Block<const Eigen::Matrix<double, 4, 4>, 3, 1, true>]
+ EIGEN_STRONG_INLINE Derived& MatrixBase<Derived>::operator=(const MatrixBase& other)
+[01;32m[K                              ^[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Assign.h:55:30:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KEigen::Vector3d {aka Eigen::Matrix<double, 3, 1>}[m[K’ to ‘[01m[Kconst Eigen::MatrixBase<Eigen::Block<const Eigen::Matrix<double, 4, 4>, 3, 1, true> >&[m[K’
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:345:0[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Geometry:11[m[K,
+                 from [01m[K/opt/ros/kinetic/include/moveit/robot_model/joint_model.h:47[m[K,
+                 from [01m[K/opt/ros/kinetic/include/moveit/robot_model/joint_model_group.h:41[m[K,
+                 from [01m[K/opt/ros/kinetic/include/moveit/robot_model/robot_model.h:48[m[K,
+                 from [01m[K/opt/ros/kinetic/include/moveit/robot_model_loader/robot_model_loader.h:41[m[K,
+                 from [01m[K/home/miguel/ws_moveit/src/moveit_tutorials/doc/pr2_tutorials/kinematics/src/kinematic_model_tutorial.cpp:40[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:154:14:[m[K [01;36m[Knote: [m[Kcandidate: template<class OtherDerived> Derived& Eigen::MatrixBase<Derived>::operator=(const Eigen::ReturnByValue<OtherDerived>&) [with OtherDerived = OtherDerived; Derived = Eigen::Block<const Eigen::Matrix<double, 4, 4>, 3, 1, true>]
+     Derived& operator=(const ReturnByValue<OtherDerived>& other);
+[01;32m[K              ^[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:154:14:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/miguel/ws_moveit/src/moveit_tutorials/doc/pr2_tutorials/kinematics/src/kinematic_model_tutorial.cpp:120:36:[m[K [01;36m[Knote: [m[K  ‘[01m[KEigen::Vector3d {aka Eigen::Matrix<double, 3, 1>}[m[K’ is not derived from ‘[01m[Kconst Eigen::ReturnByValue<Derived>[m[K’
+   end_effector_state.translation() = Eigen::Vector3d(0.7,0.4,1.1);
+[01;32m[K                                    ^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:62:0[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Geometry:11[m[K,
+                 from [01m[K/opt/ros/kinetic/include/moveit/robot_model/joint_model.h:47[m[K,
+                 from [01m[K/opt/ros/kinetic/include/moveit/robot_model/joint_model_group.h:41[m[K,
+                 from [01m[K/opt/ros/kinetic/include/moveit/robot_model/robot_model.h:48[m[K,
+                 from [01m[K/opt/ros/kinetic/include/moveit/robot_model_loader/robot_model_loader.h:41[m[K,
+                 from [01m[K/home/miguel/ws_moveit/src/moveit_tutorials/doc/pr2_tutorials/kinematics/src/kinematic_model_tutorial.cpp:40[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Block.h:162:5:[m[K [01;36m[Knote: [m[Kcandidate: Eigen::BlockImpl<XprType, BlockRows, BlockCols, InnerPanel, Eigen::Dense>& Eigen::BlockImpl<XprType, BlockRows, BlockCols, InnerPanel, Eigen::Dense>::operator=(const Eigen::BlockImpl<XprType, BlockRows, BlockCols, InnerPanel, Eigen::Dense>&) [with XprType = const Eigen::Matrix<double, 4, 4>; int BlockRows = 3; int BlockCols = 1; bool InnerPanel = true]
+     EIGEN_INHERIT_ASSIGNMENT_OPERATORS(BlockImpl)
+[01;32m[K     ^[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Block.h:162:5:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KEigen::Vector3d {aka Eigen::Matrix<double, 3, 1>}[m[K’ to ‘[01m[Kconst Eigen::BlockImpl<const Eigen::Matrix<double, 4, 4>, 3, 1, true, Eigen::Dense>&[m[K’
+make[2]: *** [doc/pr2_tutorials/kinematics/CMakeFiles/kinematic_model_tutorial.dir/src/kinematic_model_tutorial.cpp.o] Error 1
+make[1]: *** [doc/pr2_tutorials/kinematics/CMakeFiles/kinematic_model_tutorial.dir/all] Error 2
+make: *** [all] Error 2

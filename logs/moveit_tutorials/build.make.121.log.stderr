@@ -1,0 +1,38 @@
+[01m[K/home/miguel/ws_moveit/src/moveit_tutorials/doc/pr2_tutorials/kinematics/src/kinematic_model_tutorial.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/miguel/ws_moveit/src/moveit_tutorials/doc/pr2_tutorials/kinematics/src/kinematic_model_tutorial.cpp:249:3:[m[K [01;31m[Kerror: [m[K‘[01m[Ksuccess[m[K’ was not declared in this scope
+   success = iptp.computeTimeStamps(rt);
+[01;32m[K   ^[m[K
+[01m[K/home/miguel/ws_moveit/src/moveit_tutorials/doc/pr2_tutorials/kinematics/src/kinematic_model_tutorial.cpp:249:3:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+In file included from [01m[K/usr/include/boost/exception/detail/exception_ptr.hpp:23:0[m[K,
+                 from [01m[K/usr/include/boost/exception_ptr.hpp:9[m[K,
+                 from [01m[K/usr/include/boost/thread/exceptional_ptr.hpp:10[m[K,
+                 from [01m[K/usr/include/boost/thread/future.hpp:23[m[K,
+                 from [01m[K/usr/include/boost/thread.hpp:24[m[K,
+                 from [01m[K/opt/ros/kinetic/include/tf/transform_listener.h:43[m[K,
+                 from [01m[K/opt/ros/kinetic/include/tf/message_filter.h:36[m[K,
+                 from [01m[K/opt/ros/kinetic/include/moveit/planning_scene_monitor/planning_scene_monitor.h:42[m[K,
+                 from [01m[K/opt/ros/kinetic/include/moveit_visual_tools/moveit_visual_tools.h:47[m[K,
+                 from [01m[K/home/miguel/ws_moveit/src/moveit_tutorials/doc/pr2_tutorials/kinematics/src/kinematic_model_tutorial.cpp:53[m[K:
+[01m[K/usr/include/boost/exception/detail/clone_current_exception.hpp:34:23:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::exception_detail::clone_current_exception_result::success[m[K’
+             int const success=0;
+[01;32m[K                       ^[m[K
+In file included from [01m[K/usr/include/boost/system/system_error.hpp:14:0[m[K,
+                 from [01m[K/usr/include/boost/thread/exceptions.hpp:22[m[K,
+                 from [01m[K/usr/include/boost/thread/pthread/mutex.hpp:14[m[K,
+                 from [01m[K/usr/include/boost/thread/mutex.hpp:16[m[K,
+                 from [01m[K/opt/ros/kinetic/include/tf/time_cache.h:36[m[K,
+                 from [01m[K/opt/ros/kinetic/include/tf/tf.h:43[m[K,
+                 from [01m[K/opt/ros/kinetic/include/moveit/move_group_interface/move_group_interface.h:53[m[K,
+                 from [01m[K/home/miguel/ws_moveit/src/moveit_tutorials/doc/pr2_tutorials/kinematics/src/kinematic_model_tutorial.cpp:44[m[K:
+[01m[K/usr/include/boost/system/error_code.hpp:59:9:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksuccess[m[K’
+         success = 0,
+[01;32m[K         ^[m[K
+[01m[K/home/miguel/ws_moveit/src/moveit_tutorials/doc/pr2_tutorials/kinematics/src/kinematic_model_tutorial.cpp:256:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoveit::planning_interface::MoveGroup[m[K’ has not been declared
+   moveit::planning_interface::MoveGroup::Plan plan;
+[01;32m[K                               ^[m[K
+[01m[K/home/miguel/ws_moveit/src/moveit_tutorials/doc/pr2_tutorials/kinematics/src/kinematic_model_tutorial.cpp:257:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kplan[m[K’ was not declared in this scope
+   plan.trajectory_ = trajectory_msg;
+[01;32m[K   ^[m[K
+make[2]: *** [doc/pr2_tutorials/kinematics/CMakeFiles/kinematic_model_tutorial.dir/src/kinematic_model_tutorial.cpp.o] Error 1
+make[1]: *** [doc/pr2_tutorials/kinematics/CMakeFiles/kinematic_model_tutorial.dir/all] Error 2
+make: *** [all] Error 2

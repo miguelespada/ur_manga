@@ -1,0 +1,8 @@
+prefix=/home/miguel/ws_moveit/install
+
+Name: ur_driver
+Description: Description of ur_driver
+Version: 1.2.0
+Cflags: -I/home/miguel/ws_moveit/install/include
+Libs: -L/home/miguel/ws_moveit/install/lib 
+Requires: dynamic_reconfigure

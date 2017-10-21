@@ -1,0 +1,8 @@
+prefix=/home/miguel/ws_moveit/install
+
+Name: pr2_machine
+Description: Description of pr2_machine
+Version: 1.12.0
+Cflags: 
+Libs: -L/home/miguel/ws_moveit/install/lib 
+Requires: 

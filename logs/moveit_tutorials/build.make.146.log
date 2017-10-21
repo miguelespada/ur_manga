@@ -1,0 +1,12 @@
+[  6%] Built target state_display_tutorial
+[ 12%] Built target ros_api_tutorial
+[ 18%] Built target planning_scene_ros_api_tutorial
+[ 24%] Built target planning_pipeline_tutorial
+[ 30%] Built target planning_scene_tutorial
+[ 36%] Built target motion_planning_api_tutorial
+[ 42%] Built target kinematic_model_tutorial
+[ 48%] Built target move_group_interface_tutorial
+[ 54%] Built target pick_place_tutorial
+[ 69%] Built target attached_body_tutorial
+[ 84%] Built target interactivity_tutorial
+[100%] Built target collision_contact_tutorial

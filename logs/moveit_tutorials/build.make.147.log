@@ -1,0 +1,15 @@
+[35m[1mScanning dependencies of target kinematic_model_tutorial[0m
+[ 12%] Built target planning_scene_ros_api_tutorial
+[ 12%] Built target motion_planning_api_tutorial
+[ 24%] Built target planning_scene_tutorial
+[ 24%] Built target planning_pipeline_tutorial
+[ 30%] Built target state_display_tutorial
+[ 36%] Built target move_group_interface_tutorial
+[ 42%] Built target ros_api_tutorial
+[ 45%] [32mBuilding CXX object doc/pr2_tutorials/kinematics/CMakeFiles/kinematic_model_tutorial.dir/src/kinematic_model_tutorial.cpp.o[0m
+[ 51%] Built target pick_place_tutorial
+[ 66%] Built target interactivity_tutorial
+[ 81%] Built target collision_contact_tutorial
+[ 96%] Built target attached_body_tutorial
+[100%] [32m[1mLinking CXX executable /home/miguel/ws_moveit/devel/.private/moveit_tutorials/lib/moveit_tutorials/kinematic_model_tutorial[0m
+[100%] Built target kinematic_model_tutorial
