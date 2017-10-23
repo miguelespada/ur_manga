@@ -20,19 +20,11 @@ DELTA_ALPHA = 0.0055
 PUSH_TOLERANCE = 0.001
 
 def initRobot():
-    global zeroPose
-    print "===== Run first ======================================================="
-    print "roslaunch ur_modern_driver ur5_bringup.launch robot_ip:=192.168.1.123 limited:=true"
-    print "roslaunch ur5_moveit_config ur5_moveit_planning_execution.launch limited:=true"
-
-
-    print "======================================================="
-
+    global zeroPose, rospy
     global robot, scene, group
     moveit_commander.roscpp_initialize(sys.argv)
     time.sleep(0.5)
-    rospy.init_node('move_group_python_interface_tutorial',
-                        anonymous=True)
+    rospy.init_node('move_group_python_interface',anonymous=True,disable_signals=True)
     time.sleep(0.5)
     robot = moveit_commander.RobotCommander()
     if not("manipulator" in robot.get_group_names()):
@@ -52,6 +44,7 @@ def initRobot():
         print "World detetected"
 
     initialJoinValues = [77.32632695,  -69.73220526,  121.29976102, -141.59751593, -90.06095192,  168.36293361]
+    time.sleep(1)
 
     print "Initial Join values should be", initialJoinValues
     group.set_goal_position_tolerance(0.00001)
@@ -75,6 +68,9 @@ def initRobot():
     zeroPose.orientation.w = 0.5
 
     return robot, scene, group, zeroPose
+
+def shutdown():
+    rospy.signal_shutdown("Closing rospy")
 
 class Point:
     def fromString(self, s):
@@ -150,7 +146,7 @@ def loadMatrix():
 
 
 def goToPose(pose, step=0.05):
-    waypoints = []
+    waypoints = [group.get_current_pose().pose]
     waypoints.append(pose)
     (plan, fraction) = group.compute_cartesian_path(
                          waypoints,   # waypoints to follow
@@ -281,6 +277,7 @@ def addConstrains():
     group.set_path_constraints(constraint)
     
 def goToZero():
-    goToPose(zeroPose, 0.0001)
+    plan = goToPose(zeroPose, 0.0001)
     print "Adding Constraints"
     addConstrains()
+    return plan
