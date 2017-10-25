@@ -29,10 +29,10 @@ import types
 server.handle_timeout = types.MethodType(handle_timeout, server)
 
 def zero_callback(path, tags, args, source):
-    if args[0] == 1.0: goToZero()
+    goToZero()
 
 def uno_callback(path, tags, args, source):
-    if args[0] == 1.0:  pushTwo((2, 4), (2, 5))
+    pushTwo((2, 4), (2, 5))
 
 def all_callback(path, tags, args, source):
     if args[0] == 1.0:  pushAll()
@@ -46,19 +46,23 @@ def stop_callback(path, tags, args, source):
     group.stop()
 
 def trajectory_callback(path, tags, args, source):
-    if args[0] == 1.0:
-        trajectory = "0,0;2,11;2,0;0,11"
-        tokens = trajectory.split(";")
-        tPoints = []
-        for t in tokens:
-            tPoints.append(map(lambda x: int(x), t.split(",")))
-        createPath(tPoints)
+    trajectory = args[0]
+    tokens = trajectory.split(";")
+    tPoints = []
+    for t in tokens[:-1]:
+        print t
+        tPoints.append(map(lambda x: int(x), t.split(",")))
+
+    createPath(tPoints)
 
 server.addMsgHandler( "/1/push4",  trajectory_callback )
 server.addMsgHandler( "/1/push5", stop_callback )
 server.addMsgHandler( "/1/push6", quit_callback )
 server.addMsgHandler( "/1/push1",  zero_callback )
+server.addMsgHandler( "/zero",  zero_callback )
 server.addMsgHandler( "/1/push2",  uno_callback )
+server.addMsgHandler( "/one",  uno_callback )
+server.addMsgHandler( "/path",  trajectory_callback )
 server.addMsgHandler( "/1/push3",  all_callback )
 
 # user script that's called by the game engine every frame
