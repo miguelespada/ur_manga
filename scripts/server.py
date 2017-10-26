@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-from OSC import OSCServer
+from OSC import OSCServer, OSCClient, OSCMessage
 import sys
 from time import sleep
+from random import shuffle
 
 
 import socket
@@ -29,10 +30,28 @@ import types
 server.handle_timeout = types.MethodType(handle_timeout, server)
 
 def zero_callback(path, tags, args, source):
+
+    client = OSCClient()
+    client.connect( (source[0], 8001) )
+    client.send( OSCMessage("/busy" ) )
+    print "Go Zero"
     goToZero()
 
-def uno_callback(path, tags, args, source):
+    client = OSCClient()
+    client.connect( (source[0], 8001) )
+    client.send( OSCMessage("/noBusy" ) )
+
+def test_callback(path, tags, args, source):
+
+    client = OSCClient()
+    client.connect( (source[0], 8001) )
+    client.send( OSCMessage("/busy" ) )
+    print "Do test"
     pushTwo((2, 4), (2, 5))
+
+    client = OSCClient()
+    client.connect( (source[0], 8001) )
+    client.send( OSCMessage("/noBusy" ) )
 
 def all_callback(path, tags, args, source):
     if args[0] == 1.0:  pushAll()
@@ -53,17 +72,37 @@ def trajectory_callback(path, tags, args, source):
         print t
         tPoints.append(map(lambda x: int(x), t.split(",")))
 
+    client = OSCClient()
+    client.connect( (source[0], 8001) )
+    client.send( OSCMessage("/busy" ) )
+
+    shuffle(tPoints)
+    print "Executing", tPoints
     createPath(tPoints)
+
+    client = OSCClient()
+    client.connect( (source[0], 8001) )
+    client.send( OSCMessage("/noBusy" ) )
+    
+def ping_callback(path, tags, args, source):
+    try:
+        client = OSCClient()
+        client.connect( (source[0], 8001) )
+        client.send( OSCMessage("/ping" ) )
+    except Exception as e:
+        print e
 
 server.addMsgHandler( "/1/push4",  trajectory_callback )
 server.addMsgHandler( "/1/push5", stop_callback )
 server.addMsgHandler( "/1/push6", quit_callback )
 server.addMsgHandler( "/1/push1",  zero_callback )
 server.addMsgHandler( "/zero",  zero_callback )
-server.addMsgHandler( "/1/push2",  uno_callback )
-server.addMsgHandler( "/one",  uno_callback )
+server.addMsgHandler( "/1/push2",  test_callback )
+server.addMsgHandler( "/test",  test_callback )
 server.addMsgHandler( "/path",  trajectory_callback )
 server.addMsgHandler( "/1/push3",  all_callback )
+
+server.addMsgHandler( "/ping",  ping_callback )
 
 # user script that's called by the game engine every frame
 def each_frame():
